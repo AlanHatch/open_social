@@ -9,7 +9,7 @@ dependencies:
     - options
     - social_post
 _core:
-  default_config_hash: taJtVLpGOqefYYGQiaA9LUHwIATJB8SmDG6ACxrNGiw
+  default_config_hash: _JmlmKiydMMSHiHwKxrIgz1TclzTRi13Gz2Px8Upqv0
 id: activity_stream
 label: 'Activity Stream'
 module: views
@@ -165,45 +165,6 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
-        activity_filter_nodes_from_my_groups_filter:
-          id: activity_filter_nodes_from_my_groups_filter
-          table: activity
-          field: activity_filter_nodes_from_my_groups_filter
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: ''
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: activity
-          plugin_id: activity_filter_nodes_from_my_groups
       sorts:
         created:
           id: created
@@ -463,29 +424,6 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - user
-      tags:
-        - 'config:core.entity_view_display.activity.activity.default'
-        - 'config:core.entity_view_display.activity.activity.notification'
-        - 'config:core.entity_view_display.activity.activity.notification_archive'
-  page_activity_stream:
-    display_plugin: page
-    id: page_activity_stream
-    display_title: Page
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: stream
-      access:
-        type: none
-        options: {  }
-      defaults:
-        access: false
-      enabled: false
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url.query_args
       tags:
         - 'config:core.entity_view_display.activity.activity.default'
         - 'config:core.entity_view_display.activity.activity.notification'
